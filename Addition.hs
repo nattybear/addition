@@ -30,3 +30,6 @@ main = hspec $ do
 
 trivialInt :: Gen Int
 trivialInt = return 1
+
+oneThroughThree :: Gen Int
+oneThroughThree = elements [1, 2, 3]
