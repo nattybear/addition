@@ -45,3 +45,20 @@ genOrdering = elements [LT, EQ, GT]
 
 genChar :: Gen Char
 genChar = elements ['a'..'z']
+
+genTuple :: (Arbitrary a, Arbitrary b)
+         => Gen (a, b)
+genTuple = do
+  a <- arbitrary
+  b <- arbitrary
+  return (a, b)
+
+genThreeple :: ( Arbitrary a
+               , Arbitrary b
+               , Arbitrary c )
+            => Gen (a, b, c)
+genThreeple = do
+  a <- arbitrary
+  b <- arbitrary
+  c <- arbitrary
+  return (a, b, c)
