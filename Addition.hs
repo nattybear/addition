@@ -33,3 +33,15 @@ trivialInt = return 1
 
 oneThroughThree :: Gen Int
 oneThroughThree = elements [1, 2, 3]
+
+genBool :: Gen Bool
+genBool = choose (False, True)
+
+genBool' :: Gen Bool
+genBool' = elements [False, True]
+
+genOrdering :: Gen Ordering
+genOrdering = elements [LT, EQ, GT]
+
+genChar :: Gen Char
+genChar = elements ['a'..'z']
